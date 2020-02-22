@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexBox</title>
+    <style>
+      header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-self: center;
+      }
+      content {
+        display: flex;
+        flex-direction: row;
+      }
+      nav-right {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+      }
+      main {
+        display: flex;
+        flex: 3;
+        flex-direction: row;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>Icon</div>
+      <div>Title</div>
+      <div>Icon</div>
+    </header>
+    <content>
+      <nav-right>
+        <h2>Navigation</h2>
+        <a href="#">Text</a>
+        <a href="#">Text</a>
+        <a href="#">Text</a>
+      </nav-right>
+      <main>
+        <h2>title for main content</h2>
+        <div>Text telling you how awesome the side is</div>
+        <div class="image">
+          <h2>header</h2>
+          <img src="" />
+          <p>some text</p>
+        </div>
+      </main>
+    </content>
+  </body>
+</html>
