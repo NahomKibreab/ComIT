@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logical Operator</title>
+    <script>
+      let isLoggedIn = true;
+      let canDelete = true;
+
+      //   AND
+      if (isLoggedIn && canDelete) {
+        console.log("you're allowed to delete");
+      }
+
+      //   OR
+
+      let doTheyHavePizza = false;
+      let doTheyHavetTerribleTacos = true;
+
+      if (doTheyHavePizza || doTheyHavetTerribleTacos) {
+        console.log("here you go...");
+      } else {
+        console.log("sorry bro no food");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
