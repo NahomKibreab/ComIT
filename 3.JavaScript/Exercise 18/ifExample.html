@@ -13,9 +13,9 @@
       // if health is eual to 100 your very health
       // if health is greater than 100 your in god mode
 
-      let health = 101;
+      let health = -101;
 
-      if (health == 0) {
+      if (health <= 0) {
         console.log("Your dead");
       } else if (health <= 25) {
         console.log("Seek medical attention");
