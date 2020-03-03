@@ -4,19 +4,83 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-self: center;
+      }
+      main input[type="text"] {
+        padding: 10px;
+        margin: 10px;
+        flex-direction: column;
+      }
+      main button {
+        margin-left: 10px;
+        padding: 10px;
+        background-color: rgb(116, 114, 204);
+        color: white;
+      }
+      div#result {
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+    </style>
   </head>
   <body>
-    <input value="" id="firstNumber" type="text" />
-    +
-    <input value="" id="secondNumber" type="text" />
-    <button id="calculatorButton">Calculator</button>
-    <div>Answer is <span id="answer"></span></div>
+    <main>
+      <div>
+        <input id="firstNumber" type="text" />
+        <select id="selection">
+          <option value="1">+</option>
+          <option value="2">-</option>
+          <option value="3">*</option>
+          <option value="4">/</option>
+        </select>
+        <input id="secondNumber" type="text" />
+        <button id="calculatorButton">Calculator</button>
+      </div>
+
+      <div id="result">Answer is <span id="answer"></span></div>
+    </main>
+
     <script>
       let first = document.getElementById("firstNumber");
       let second = document.getElementById("secondNumber");
-      function sum(a, b) {
-        return a + b;
+      let selection = document.getElementById("selection");
+      let btn = document.getElementById("calculatorButton");
+
+      let answer = document.getElementById("answer");
+
+      function sum(a, b, c) {
+        switch (c) {
+          case 1:
+            return a + b;
+            break;
+          case 2:
+            return a - b;
+            break;
+          case 3:
+            return a * b;
+            break;
+          case 4:
+            return a / b;
+            break;
+          default:
+            return 0;
+            break;
+        }
       }
+
+      btn.addEventListener("click", function() {
+        answer.innerHTML = sum(
+          Number(first.value),
+          Number(second.value),
+          Number(selection.value)
+        );
+      });
     </script>
   </body>
 </html>
