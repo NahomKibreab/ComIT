@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Box</title>
+    <style>
+      #box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    Color <input type="color" id="color" />
+    <button onclick="findColor()">Set</button>
+    <script>
+      function findColor() {
+        let color = document.getElementById("color");
+        let box = document.getElementById("box");
+        box.style.backgroundColor = color.value;
+      }
+    </script>
+  </body>
+</html>
