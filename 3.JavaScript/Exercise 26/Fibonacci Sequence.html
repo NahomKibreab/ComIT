@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fibonacci Sequence</title>
+  </head>
+  <body>
+    <script>
+      function calculateFibonacci(maxCalculations) {
+        const fibonacciSequence = [0, 1];
+
+        if (maxCalculations == 1) {
+          return fibonacciSequence;
+        }
+
+        for (let i = 0; i < maxCalculations; i++) {
+          let lastIndex = fibonacciSequence.length - 1;
+          let secondLastIndex = fibonacciSequence.length - 2;
+
+          let lastValue = fibonacciSequence[lastIndex];
+          let secondLastValue = fibonacciSequence[secondLastIndex];
+
+          let result = lastValue + secondLastValue;
+          fibonacciSequence.push(result);
+        }
+        return fibonacciSequence;
+      }
+    </script>
+  </body>
+</html>
